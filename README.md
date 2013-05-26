@@ -34,13 +34,13 @@ Wykorzystane technologie:
 
 Opis: 
 
-Server : Obsługuje przesyłanie wiadomosci pomiędzy użytkownikami. 
++Server : Obsługuje przesyłanie wiadomosci pomiędzy użytkownikami. 
          Rejestruje oraz usuwa użytkowników chcących skorzystać z usługi. 
          Obsługa każdego nowego połaczenia realizowana jest przez osobny wątek. 
          Wątki servera obsługujące połączenie z klientem zarządzane są za pomocą ExecutorService. 
 
 
-Client : Nadzoruje połączenie z serverem po stronie Klienta. 
++Client : Nadzoruje połączenie z serverem po stronie Klienta. 
          Interfejs użytkownika oparty został o Swing. 
          Istnieje możliwośc komunikacji ze wszystkimi bądź też 
          z wybraną osobą, zmiana statusu oraz powrót do wcześniej wysłanej wiadomości 
@@ -53,7 +53,8 @@ Jest to dość rozbudowany projekt dlatego w celach demonstracyjnych przygotowa�
 Link (video): http://www.youtube.com/watch?v=A39XXzWsrTk 
 Proszę włączyć odtwarzanie na cały ekran oraz przestawić jakośc video na HD 720p.
 
-Projekt podzielony na 4 foldery które zawierają: 
+
++Projekt podzielony na 4 foldery które zawierają: 
 Server : kod klasy servera oraz pomocniczej klasy typu message.
 Client : Okno glowne programu, umożliwia wysyłanie wiadomości typu broadcast, 
          obserwowanie aktualnie przybywajacych uzytkownikow na serwerze 
