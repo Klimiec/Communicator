@@ -13,7 +13,7 @@ public class Message implements Serializable {
 
 	
 	// Attributes 
-	String nickTo;         // tutaj tez moze byc przechowywana informacja o stanie  
+	String nickTo;              
 	String nickFrom;       
 	String message;
 	

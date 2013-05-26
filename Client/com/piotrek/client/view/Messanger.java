@@ -1,7 +1,6 @@
 package com.piotrek.client.view;
 
 import java.awt.Dimension;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Insets;
 import java.awt.Toolkit;

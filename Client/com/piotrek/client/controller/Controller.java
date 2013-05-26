@@ -47,9 +47,6 @@ public class Controller implements PropertyChangeListener {
 		usersCaretakerModels = new HashMap<>();
 	}
 	
-//	public Controller(Messanger view) {      // Zablokowalem, ale to jest chyba do wywalenia 
-//		setViewMessanger(view);
-//	}
 	
 	// Settings Method : rejestruje modele w controllerze
 	public void addModel(String nazwa, AbstractModel model){
@@ -236,12 +233,7 @@ public class Controller implements PropertyChangeListener {
 	
 	/**********************************************  Obsluga wzorca memento  */
 	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	/********************************************************
@@ -375,7 +367,6 @@ public class Controller implements PropertyChangeListener {
 				 *  okna rozmowy typu MessageBox dla danego uzytkownika albo stworzy to okno
 				 *  z zainicjalizowanym komunikatem ktory otrzymalismy. 
 				 *  
-				 *  TODO : zastanow sie czy nie mozna wywalic tej obslugi wyjatek - po co ona w ogole tu jest?
 				 */
 				
 				if (viewsMessageBox.containsKey(message.getNickFrom())) {                // Czy istnieje okno rozmowy z takim uzytkownikiem ?
@@ -478,8 +469,6 @@ public class Controller implements PropertyChangeListener {
 	    } else if (propertyName.equals("changeUserStatus")) {
 			
 			/*
-			 * TODO : O co tu kurwa chodzi ? :P :P 
-			 * 
 			 * odswieze cale drzewo
 			 */
 			
@@ -541,8 +530,6 @@ public class Controller implements PropertyChangeListener {
 		}else if(propertyName.equals("infoAboutUserInJTree")){
 			
 			/*
-			 *  TODO : to jest zjebane, napraw to! 
-			 * 
 			 *  usunalem infomracje o danym oknie !
 			 */
 			

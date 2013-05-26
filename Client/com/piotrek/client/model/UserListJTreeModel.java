@@ -47,7 +47,7 @@ public class UserListJTreeModel extends AbstractModel {
 		this.firePropertyChange("changeUserStatus", null, "brak");                  // Czy nie moga byc dwa nule?
 	}
 	
-	public void isUserAtTheList(String userName){                                   //TODO : Przerób to! To nie powinno informowac kontrollera! 
+	public void isUserAtTheList(String userName){                                   
 		if (!userMap.containsKey(userName))
 			this.firePropertyChange("", userName, null);
 	}

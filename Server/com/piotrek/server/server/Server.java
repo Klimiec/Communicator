@@ -19,7 +19,7 @@ public class Server {
 	private final ExecutorService clientsThreads;
 	
 	
-	// Attributes : dane wspó³dzielone  @TODO:  Przerób te mapy na threadsafe! 
+	// Attributes : dane wspó³dzielone  
 	private Map<String, ObjectOutputStream> mapUserConnetionOutputStreams; 
 	private Map<String, String>  mapUserStatus;
 	
@@ -97,7 +97,7 @@ public class Server {
 				
 				// Zapisanie danych nowego uzytkownika
 				mapUserConnetionOutputStreams.put(userNick, outputObject);
-				mapUserStatus.put(userNick, userStatus);                           //@ TO powinno byc synchronizowane! Wystarczy chyba tylko zrobic mape @threadSafe
+				mapUserStatus.put(userNick, userStatus);                          
 				
 				
 				// Wyslanie do pozostalych uzytkownikow nazwy nowego uzytkownika 
@@ -124,7 +124,7 @@ public class Server {
 	
 	/*
 	 * Opis: powiadomienie innych uzytkownik o tym, ze jakis uzytkownik wyszedl z servera i trzeba wywalic jego dane z JTree.
-	 * Dodatkowo nalezy wywalic dane o uzytkownik - jego strumieniach i statusie bo go juz nie ma na serwerze przeciez :P 
+	 * Dodatkowo nalezy usunac dane o uzytkowniku - jego strumieniach i statusie bo go juz nie ma na serwerze 
 	 */
 	public void removeUserFromJTree(String userNick) {
 		
@@ -134,7 +134,7 @@ public class Server {
 			for (Map.Entry<String, ObjectOutputStream> entry : mapUserConnetionOutputStreams.entrySet())
 				if (!entry.getKey().equals(userNick)){
 					try {
-						entry.getValue().writeObject(new Message(entry.getKey(), userNick, "removeUserFromJTree"));  //TODO zmien nazwe tego komunikatu!!!
+						entry.getValue().writeObject(new Message(entry.getKey(), userNick, "removeUserFromJTree"));  
 						entry.getValue().flush();
 					} catch (IOException e) {/* handle exception */} 
 				}
