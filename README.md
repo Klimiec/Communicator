@@ -33,10 +33,12 @@ Wykorzystane technologie:
 - Wzorce: MVC, Observer, Memento
 
 Opis: 
+
 Server : Obsługuje przesyłanie wiadomosci pomiędzy użytkownikami. 
          Rejestruje oraz usuwa użytkowników chcących skorzystać z usługi. 
          Obsługa każdego nowego połaczenia realizowana jest przez osobny wątek. 
          Wątki servera obsługujące połączenie z klientem zarządzane są za pomocą ExecutorService. 
+
 
 Client : Nadzoruje połączenie z serverem po stronie Klienta. 
          Interfejs użytkownika oparty został o Swing. 
