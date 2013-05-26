@@ -57,12 +57,15 @@ Proszę włączyć odtwarzanie na cały ekran oraz przestawić jakośc video na 
 Projekt podzielony na 4 foldery które zawierają: 
 
 a) Server : kod klasy servera oraz pomocniczej klasy typu message.
+
 b) Client : Okno glowne programu, umożliwia wysyłanie wiadomości typu broadcast, 
          obserwowanie aktualnie przybywajacych uzytkownikow na serwerze 
          oraz zmienie statustu podczas pracy z programem. 
+
 c) MessageBox : Okno obsługujące przesyłanie wiadomosci do konkretnych uzytkownikow. 
              Oprócz wysyłania i prezentacji wiadomosci możliwy jest też powrót do 
              wcześniej wysłanych wiadomosci dzięki mechanizmowi undo/redo. 
+             
 d) LoginBox : Okno pojawiające się podczas logowania do serwera. Umożliwia wybranie nicku 
            oraz statusu podczas logowania do serwera. Nazwa uzytkownika przed zalogowaniem 
            jest sprawdzana pod katem poprawności  
